@@ -1,0 +1,1 @@
+<?php require_once __DIR__.'/../config.php'; require_role('head_teacher');include '../includes/layout-start.php';?><h1>Head teacher dashboard</h1><div class="card"><p>Monitor teachers and students and submit rule or regularity reports to the administrator.</p></div><?php include '../includes/layout-end.php';?>

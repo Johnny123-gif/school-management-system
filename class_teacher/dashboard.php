@@ -1,0 +1,1 @@
+<?php require_once __DIR__.'/../config.php'; require_role('class_teacher');include '../includes/layout-start.php';?><h1>Class teacher dashboard</h1><div class="card"><p>Only the assigned class teacher can record attendance for the class.</p><a class="button" href="mark_attendance.php">Mark attendance</a></div><?php include '../includes/layout-end.php';?>

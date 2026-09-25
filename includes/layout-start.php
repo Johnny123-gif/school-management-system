@@ -1,0 +1,1 @@
+<?php require_once __DIR__.'/../config.php'; ?><!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="<?=BASE_URL?>css/style.css"></head><body><?php include __DIR__.'/header.php'; ?><div class="layout"><?php include __DIR__.'/sidebar.php'; ?><main>

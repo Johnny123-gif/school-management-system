@@ -1,0 +1,1 @@
+<?php define('SITE_TITLE','School Management System'); require_once __DIR__.'/../config.php'; require_login(); ?>

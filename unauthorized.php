@@ -1,0 +1,1 @@
+<?php require_once 'config.php';http_response_code(403);?><h1>Unauthorized</h1><p>You do not have permission to view this page.</p>

@@ -1,0 +1,1 @@
+<?php require_once __DIR__.'/../config.php'; require_login(); ?><header><strong>📚 <?=e(SITE_TITLE ?? 'School Management')?></strong><span><?=e($_SESSION['user_role'])?> · <a href="<?=BASE_URL?>api/logout.php">Logout</a></span></header>
