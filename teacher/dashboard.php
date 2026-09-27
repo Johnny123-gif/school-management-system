@@ -1,1 +1,9 @@
-<?php require_once __DIR__.'/../config.php'; require_role(['teacher','class_teacher']);$uid=$_SESSION['user_id'];$s=$conn->prepare('SELECT id,first_name,last_name FROM teachers WHERE user_id=?');$s->bind_param('i',$uid);$s->execute();$teacher=$s->get_result()->fetch_assoc();include '../includes/layout-start.php';?><h1>Teacher dashboard</h1><div class="card"><h2>Welcome, <?=e($teacher['first_name'].' '.$teacher['last_name'])?></h2><p>You can upload grades only for courses and classes assigned by the admin.</p></div><?php include '../includes/layout-end.php';?>
+<?php require_once __DIR__.'/../config.php'; require_role(['teacher','class_teacher','head_teacher']); include '../includes/layout-start.php'; $uid=$_SESSION['user_id']; $role=$_SESSION['user_role']; $s=$conn->prepare('SELECT first_name,last_name FROM teachers WHERE user_id=?'); $s->bind_param('i',$uid); $s->execute(); $t=$s->get_result()->fetch_assoc(); ?>
+<h1>Teacher Dashboard</h1>
+<div class="card">
+  <h2>Welcome, <?=e($t['first_name'].' '.$t['last_name'])?></h2>
+  <p>You can upload grades and submit performance reports.</p>
+  <a class="button" href="upload_grades.php">Upload Grades</a>
+  <a class="button" href="submit_report.php">Submit Performance Report</a>
+</div>
+<?php include '../includes/layout-end.php';?>
